@@ -1,0 +1,121 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000; font-family: 'Noto Sans KR'}
+
+.header{
+    width: 100%;
+}
+
+.header .swiper{
+    width: 1920px;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+}
+.header .swiper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.header .swiper .header-box{
+    position: absolute;
+    top: 320px;
+    left: 360px;
+    z-index: 99;
+    color: #fff;
+}
+.header .swiper .header-box:nth-child(2){
+    display: none;
+}
+.header .swiper .header-box:nth-child(2).on{
+    display: block;
+}
+.header .swiper .header-box:nth-child(3){
+    display: none;
+}
+.header .swiper .header-box:nth-child(3).on{
+    display: block;
+}
+.header .swiper .header-box:nth-child(4){
+    display: none;
+}
+.header .swiper .header-box:nth-child(4).on{
+    display: block;
+}
+.header .swiper .header-box a{
+    position: relative;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+}
+.header .swiper .header-box a::after{
+    content: "";
+    width: 30%;
+    height: 4px;
+    background-color: #1b6242;
+    position: absolute;
+    top: -10px;
+    left: 3px;
+}
+.header .swiper .header-box a::before{
+    content: "EXPLORE THE VEHHICLE";
+    position: absolute;
+    bottom: -170px;
+    left: 0;
+    font-size: 15px;
+    font-weight: 300;
+    width: 244px; height: 45px;
+    background-color: rgba(111, 97, 71, 0.7);
+    text-align: center;
+    line-height: 45px;
+
+}
+.header .swiper .header-box p:nth-child(2){
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.header .swiper .header-box p:nth-child(3),
+.header .swiper .header-box p:nth-child(4){
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.header .swiper .header-box:nth-child(3) a{
+    padding-bottom: 20px;
+    display: inline-block;
+}
+.header .swiper .header-box:nth-child(3) p:nth-child(2){
+    font-size: 14px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.header .swiper .header-box:nth-child(3) p:not(:nth-child(2)){
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+/* 스와이퍼 */
+/* 스와이퍼 */
+/* 스와이퍼 */
+
+.header .header-list{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+}
+.header .header-list .list-menu{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.68);
+}
+.header .header-list .list-wrap{
+    max-width: 1265px;
+    margin: 0 auto;
+    
+}
+.header .header-list .list-wrap ul{
+    display: grid;
+    grid-template-columns: 40% 12% 15% 12% 12%;
+}
+/* .header .header-list .list-wrap li:nth-child() */
