@@ -526,7 +526,8 @@ a{text-decoration: none; color: #000; font-family: 'Noto Sans KR'}
 .content .section4 .section-wrap{
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 392px;
+    /* padding-top: 392px; */
+    padding: 392px 2% 0;
     display: flex;
     justify-content: space-between;
 }
@@ -560,17 +561,15 @@ a{text-decoration: none; color: #000; font-family: 'Noto Sans KR'}
     height: 100%;
     margin: 0 auto;
     padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .footer .footer-top .footer-list{
     margin: 0 auto;
-    float: left;
-    margin-top: 10px;
+    flex-basis: 25%;
+    /* float: left; */
+    /* margin-top: 10px; */
     font-size: 12px;
-}
-.footer .footer-top .footer-list:nth-child(2),
-.footer .footer-top .footer-list:nth-child(3),
-.footer .footer-top .footer-list:nth-child(4){
-    margin-left: 190px;
 }
 .footer .footer-top .footer-list > a{
     color: #1b6242;
@@ -584,9 +583,7 @@ a{text-decoration: none; color: #000; font-family: 'Noto Sans KR'}
 .footer .footer-top .icon{
     /* margin-left: 1100px; */
     text-align: right;
-}
-.footer .footer-top .icon img{
-    margin-top: 100px;
+    flex-basis: 100%;
 }
 
 
@@ -646,6 +643,31 @@ a{text-decoration: none; color: #000; font-family: 'Noto Sans KR'}
     display: inline-block;
 }
 
+.top{
+    position: fixed;
+    right: 7%;
+    bottom: 10%;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #1b6242;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+}
+.top img{
+    width: 70%;
+}
+.top::after{
+    position: absolute;
+    content: "TOP";
+    color: #1b6242;
+    bottom: -90%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1300px) {
     .header .header-list .list-wrap ul,
     .header .header-list .list-nav{
@@ -674,6 +696,10 @@ a{text-decoration: none; color: #000; font-family: 'Noto Sans KR'}
     /* 헤더 */
     /* 헤더 */
     /* 헤더 */
+    .header .swiper .header-box a::before{
+        display: none;
+    }
+
 
     .content .section1 .exterior-right .exterior-wrap,
     .content .section2 .interior-left .interior-wrap{
@@ -736,6 +762,77 @@ a{text-decoration: none; color: #000; font-family: 'Noto Sans KR'}
 @media screen and (max-width: 640px) {
     .header .swiper .header-box a::before {
         display: none !important;
+    }
+
+    .content .section1 .exterior-right .exterior-wrap,
+    .content .section2 .interior-left .interior-wrap{
+        width: 100%;
+    }
+    .content .section1 .exterior-right .title,
+    .content .section2 .interior-left .title{
+        padding-bottom: 5%;
+    }
+    .content .section1,
+    .content .section2{
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .content .section1 .exterior-right .greenbox{
+        width: 20%;
+    }
+    .content .section1 .exterior-right .exterior-wrap,
+    .content .section2 .interior-left .interior-wrap{
+        margin-top: 10%;
+    }
+    .content .section1 .exterior-right,
+    .content .section1 .exterior-left,
+    .content .section2 .interior-right{
+        flex-basis: 100%;
+    }
+    .content .section2 .interior-left{
+        flex-basis: 100%;
+        order: 2;
+    }
+    .content .section1 .exterior-right .txt,
+    .content .section2 .interior-left .txt{
+        padding: 5%;
+    }
+
+    .content .section3 .section-wrap{
+        flex-wrap: wrap;
+    }
+    .content .section3 .section-wrap .pic{
+        flex-basis: 80%;
+        margin: 0 auto;
+    }
+    .content .section3 .section-wrap .text{
+        flex-basis: 80%;
+        padding-top: 0;
+    }
+    .content .section3 .section-wrap .text .text-box1{
+        padding-bottom: 1%;
+    }
+    .content .section3 .section-wrap .text .text-box2{
+        color: #888;
+        padding-bottom: 3%;
+    }
+    .content .section4 .section-wrap > div{
+        font-size: 12px;
+    }
+
+    .content .section4{
+        background: none;
+        /* background-color: #1b6242; */
+        height: 200px;
+        margin-top: 50px;
+    }
+    .content .section4 .section-wrap{
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .content .section4 .section-wrap > div{
+        flex-basis: 90%;
+        margin: 3% auto;
     }
 
 }
