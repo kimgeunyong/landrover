@@ -1,5 +1,20 @@
 $("document").ready(function(){
 
+    $(window).scroll(function () {
+
+        if ($(this).scrollTop() > 100) {
+            $(".top").addClass("on");
+        }
+        else {
+            $(".top").removeClass("on");
+        }
+
+    });
+
+    $(".top").click(function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     $(".header .header-list .list-wrap li:not(:nth-child(1))").hover(function(){
         $(".header .list-nav").addClass("on")
     }, function() {
