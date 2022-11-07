@@ -15,7 +15,7 @@ $("document").ready(function(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    $(".header .header-list .list-wrap li:not(:nth-child(1))").hover(function(){
+    $(".header .header-list .list-wrap ul li").hover(function(){
         $(".header .list-nav").addClass("on")
     }, function() {
         $(".header .list-nav").removeClass("on")
